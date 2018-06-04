@@ -1,10 +1,29 @@
+import java.text.DecimalFormat;
 
+/*
+ * Class PrintJob contains the properties of a single job object.
+ * 
+ * */
 public class PrintJob {
-	private int numberOfPages;
-	private int numberofColouredPages;
-	private boolean doubleSided;
-	private int numberofBWPages;
-	private double cost;
+	
+	//Total number of pages to be printed
+	private int numberOfPages; 
+	
+	//Number of coloured pages
+	private int numberofColouredPages;  
+	
+	//Whether the printing is to be single sided or double sided
+	private boolean doubleSided; 		
+	
+	//Number of black and white pages to be printed
+	private int numberofBWPages;		
+	
+	//Cost for printing this job
+	private double cost;				
+	
+	//select the size of paper to be printed on
+	private String paperSize;
+	
 	 
 	 public int getNumberOfPages() {
 		return numberOfPages;
@@ -55,7 +74,19 @@ public class PrintJob {
 		this.cost = cost;
 	}
 	
+	
+	
+public String getPaperSize() {
+		return paperSize;
+	}
 
+
+	public void setPaperSize(String paperSize) {
+		this.paperSize = paperSize;
+	}
+
+
+	//This method is the constructor of this class which initializes all its properties
 	public PrintJob(int numberofPages, int numberofColouredPages, boolean doubleSided) {
 		 this.numberOfPages = numberofPages;
 		 this.numberofColouredPages = numberofColouredPages;
@@ -63,4 +94,10 @@ public class PrintJob {
 		 this.doubleSided = doubleSided;
 		 this.cost = 0;
 	 }
+	
+	public String toString() {
+		
+		return "Print Job :\nNumber of Pages" + numberOfPages + "\nNumber of Colored Pages:" + numberofColouredPages +
+				"\nDouble Sided: " + doubleSided+ "\nCost: "+ cost +"\n\n"; 
+	}
 }

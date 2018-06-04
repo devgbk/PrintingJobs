@@ -1,10 +1,24 @@
-
+/*
+ * This class stores the prices of printing depending on various properties such as whether the 
+ * print is single sided or double sided, etc.
+ */
 public class Prices {
-	 private double singleSidedBW;
+	// price for printing single sided black white page
+	 private double singleSidedBW;	
+	 
+	//price for printing single sided coloured page
 	 private double singleSidedColoured;
-	 private double doubleSidedBW;
-	 private double doubleSidedColoured;
+	 
+	//price for printing double sided black white page
+	 private double doubleSidedBW; 
+	 
+	//price for printing double sided coloured page
+	 private double doubleSidedColoured; 
+	 
+	 //size of the paper on which job needs to be printed
 	 private String paperSize;
+	 
+	 //currency in which the prices are calculated
 	 private String currency;
 	 
 	 
@@ -56,10 +70,12 @@ public class Prices {
 		this.currency = currency;
 	}
 
-	public Prices(double singleSidedBW, double singleSidedColoured, double doubleSidedBW, double doubleSidedColoured) {
+	public Prices(double singleSidedBW, double singleSidedColoured, double doubleSidedBW, double doubleSidedColoured, String paperSize, String currency) {
 		 this.singleSidedBW = singleSidedBW;
 		 this.singleSidedColoured = singleSidedColoured;
 		 this.doubleSidedBW = doubleSidedBW;
 		 this.doubleSidedColoured = doubleSidedColoured;
+		 this.paperSize = paperSize;
+		 this.currency = currency;
 	 }
 }
