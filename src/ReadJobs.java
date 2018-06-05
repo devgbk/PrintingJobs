@@ -16,12 +16,13 @@ public class ReadJobs {
 	 * This method inputs the filename from the user and then reads the
 	 *  jobs from the csv file and converts the data into PrintJob object.
 	 */
+	
 	public static ArrayList<PrintJob> readFile(){
 		ArrayList<PrintJob> jobs = new ArrayList<PrintJob>();
 		Scanner sc = new Scanner(System.in);
-		//System.out.println("Please enter the file name :" );
-		//String filename = sc.nextLine();
-		String filename = "E:\\Study material\\PaperCut\\sample (2).csv";
+		System.out.println("Please enter the file name :" );
+		String filename = sc.nextLine();
+		//String filename = "E:\\Study material\\PaperCut\\sample (2).csv";
 		String line = "";
         String cvsSplitBy = ",";
         PrintJob job;
